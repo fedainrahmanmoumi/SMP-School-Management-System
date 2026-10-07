@@ -1,3 +1,549 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin Dashboard | SMP International School</title><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="portal.css"></head><body data-role="admin"><div class="app"><aside class="sidebar"><a class="side-brand" href="index.html"><div class="logo">SMP</div><div><b>SMP International</b><small>Admin Portal</small></div></a><nav class="side-nav"><span class="side-label">Administration</span><a class="active" data-page="dashboard">🏠 Dashboard</a><a data-page="students">👥 Students</a><a data-page="notices">🔔 Publish Notice</a><a data-page="assignments">📝 Assignments</a><a href="index.html">🌐 School Website</a><a href="login.html">↪ Logout</a></nav></aside><main class="main"><div class="topline"><div><small class="muted">ADMIN PORTAL • ACADEMIC YEAR 2026–27</small><h1>School Management Control Center</h1></div></div><section id="dashboard" class="section-page active"><div class="hero-card"><div><span class="badge">Backend Connected</span><h2>Manage the school from one place.</h2><p>Data saved here is stored in the SQLite database and can be read by student and teacher dashboards.</p></div><div class="datebox"><b>Live Database</b><br><span>SQLite + Express API</span></div></div><div class="kpi-grid"><div class="kpi"><div class="icon">👥</div><small>Students</small><b id="studentCount">—</b></div><div class="kpi"><div class="icon">📝</div><small>Assignments</small><b id="assignmentCount">—</b></div><div class="kpi"><div class="icon">🔔</div><small>Notices</small><b id="noticeCount">—</b></div><div class="kpi"><div class="icon">⚙️</div><small>System</small><b>Online</b></div></div></section><section id="students" class="section-page"><div class="section-title"><h2>Student Directory</h2></div><div class="card table-wrap"><table class="data-table"><thead><tr><th>ID</th><th>Name</th><th>Class</th><th>Section</th><th>Roll</th></tr></thead><tbody id="studentBody"></tbody></table></div></section><section id="notices" class="section-page"><div class="section-title"><h2>Publish Notice</h2></div><div class="card"><input id="noticeTitle" placeholder="Notice title"><input id="noticeCategory" placeholder="Category" value="General"><textarea id="noticeBody" style="width:100%;min-height:130px;border:1px solid #dfe5ef;border-radius:11px;padding:14px" placeholder="Notice details..."></textarea><button class="btn action" id="publishNotice">Publish Notice</button></div></section><section id="assignments" class="section-page"><div class="section-title"><h2>Assignment Overview</h2></div><div class="card" id="adminAssignments"></div></section></main></div><script src="portal.js"></script><script>
-async function adminLoad(){const s=await (await fetch('/api/students')).json();studentCount.textContent=s.length;studentBody.innerHTML=s.map(x=>`<tr><td>${x.login_id}</td><td>${x.name}</td><td>Grade ${x.grade}</td><td>${x.section}</td><td>${x.roll||'-'}</td></tr>`).join('');const a=await (await fetch('/api/teacher/assignments')).json();assignmentCount.textContent=a.length;adminAssignments.innerHTML='<h3>Published Assignments</h3>'+a.map(x=>`<div class="student-row"><span><b>${x.title}</b><small class="muted" style="display:block">Grade ${x.grade}-${x.section} • ${x.subject}</small></span><span class="tag">${x.submitted} submitted</span></div>`).join('');const n=await (await fetch('/api/notices')).json();noticeCount.textContent=n.length}document.getElementById('publishNotice').onclick=async()=>{const r=await fetch('/api/notices',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({title:noticeTitle.value,body:noticeBody.value,category:noticeCategory.value})});if(r.ok){alert('Notice published');noticeTitle.value='';noticeBody.value='';adminLoad()}};adminLoad();
-</script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Admin Dashboard | SMP International School</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="portal.css">
+</head>
+
+<body data-role="admin">
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <a class="side-brand" href="index.html">
+            <div class="logo">SMP</div>
+
+            <div>
+                <b>SMP International</b>
+                <small>Admin Portal</small>
+            </div>
+        </a>
+
+        <nav class="side-nav">
+
+            <span class="side-label">Administration</span>
+
+            <a class="active" data-page="dashboard">
+                🏠 Dashboard
+            </a>
+
+            <a data-page="students">
+                👥 Students
+            </a>
+
+            <a data-page="notices">
+                🔔 Publish Notice
+            </a>
+
+            <a data-page="assignments">
+                📝 Assignments
+            </a>
+
+            <a href="index.html">
+                🌐 School Website
+            </a>
+
+            <a href="login.html">
+                ↪ Logout
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <!-- Top Header -->
+        <div class="topline">
+
+            <div>
+                <small class="muted">
+                    ADMIN PORTAL • ACADEMIC YEAR 2026–27
+                </small>
+
+                <h1>
+                    School Management Control Center
+                </h1>
+            </div>
+
+        </div>
+
+
+        <!-- Dashboard -->
+        <section id="dashboard" class="section-page active">
+
+            <div class="hero-card">
+
+                <div>
+
+                    <span class="badge">
+                        Backend Connected
+                    </span>
+
+                    <h2>
+                        Manage the school from one place.
+                    </h2>
+
+                    <p>
+                        Data saved here is stored in the SQLite database
+                        and can be read by student and teacher dashboards.
+                    </p>
+
+                </div>
+
+                <div class="datebox">
+
+                    <b>Live Database</b>
+
+                    <br>
+
+                    <span>
+                        SQLite + Express API
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- KPI Cards -->
+            <div class="kpi-grid">
+
+                <div class="kpi">
+
+                    <div class="icon">
+                        👥
+                    </div>
+
+                    <small>
+                        Students
+                    </small>
+
+                    <b id="studentCount">
+                        —
+                    </b>
+
+                </div>
+
+
+                <div class="kpi">
+
+                    <div class="icon">
+                        📝
+                    </div>
+
+                    <small>
+                        Assignments
+                    </small>
+
+                    <b id="assignmentCount">
+                        —
+                    </b>
+
+                </div>
+
+
+                <div class="kpi">
+
+                    <div class="icon">
+                        🔔
+                    </div>
+
+                    <small>
+                        Notices
+                    </small>
+
+                    <b id="noticeCount">
+                        —
+                    </b>
+
+                </div>
+
+
+                <div class="kpi">
+
+                    <div class="icon">
+                        ⚙️
+                    </div>
+
+                    <small>
+                        System
+                    </small>
+
+                    <b>
+                        Online
+                    </b>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Students -->
+        <section id="students" class="section-page">
+
+            <div class="section-title">
+
+                <h2>
+                    Student Directory
+                </h2>
+
+            </div>
+
+
+            <div class="card table-wrap">
+
+                <table class="data-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Class</th>
+                            <th>Section</th>
+                            <th>Roll</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="studentBody">
+                        <!-- Students loaded dynamically -->
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- Notices -->
+        <section id="notices" class="section-page">
+
+            <div class="section-title">
+
+                <h2>
+                    Publish Notice
+                </h2>
+
+            </div>
+
+
+            <div class="card">
+
+                <input
+                    id="noticeTitle"
+                    placeholder="Notice title"
+                >
+
+                <input
+                    id="noticeCategory"
+                    placeholder="Category"
+                    value="General"
+                >
+
+                <textarea
+                    id="noticeBody"
+                    style="width:100%;min-height:130px;border:1px solid #dfe5ef;border-radius:11px;padding:14px"
+                    placeholder="Notice details..."
+                ></textarea>
+
+                <button
+                    class="btn action"
+                    id="publishNotice"
+                    type="button"
+                >
+                    Publish Notice
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Assignments -->
+        <section id="assignments" class="section-page">
+
+            <div class="section-title">
+
+                <h2>
+                    Assignment Overview
+                </h2>
+
+            </div>
+
+
+            <div
+                class="card"
+                id="adminAssignments"
+            >
+                <!-- Assignment data loaded dynamically -->
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="portal.js"></script>
+
+<script>
+
+async function fetchJSON(url, options = {}) {
+
+    const response = await fetch(url, options);
+
+    if (!response.ok) {
+        throw new Error(`Request failed: ${response.status}`);
+    }
+
+    return response.json();
+}
+
+
+async function adminLoad() {
+
+    try {
+
+        /* =========================
+           LOAD STUDENTS
+        ========================= */
+
+        const students = await fetchJSON('/api/students');
+
+        document.getElementById('studentCount').textContent =
+            students.length;
+
+        document.getElementById('studentBody').innerHTML =
+            students.map(student => {
+
+                return `
+                    <tr>
+                        <td>${student.login_id ?? '-'}</td>
+
+                        <td>
+                            ${student.name ?? '-'}
+                        </td>
+
+                        <td>
+                            Grade ${student.grade ?? '-'}
+                        </td>
+
+                        <td>
+                            ${student.section ?? '-'}
+                        </td>
+
+                        <td>
+                            ${student.roll ?? '-'}
+                        </td>
+                    </tr>
+                `;
+
+            }).join('');
+
+
+        /* =========================
+           LOAD ASSIGNMENTS
+        ========================= */
+
+        const assignments =
+            await fetchJSON('/api/teacher/assignments');
+
+        document.getElementById('assignmentCount').textContent =
+            assignments.length;
+
+        const assignmentContainer =
+            document.getElementById('adminAssignments');
+
+        if (!assignments.length) {
+
+            assignmentContainer.innerHTML = `
+                <h3>Published Assignments</h3>
+
+                <p class="muted">
+                    No assignments have been published yet.
+                </p>
+            `;
+
+        } else {
+
+            assignmentContainer.innerHTML = `
+                <h3>Published Assignments</h3>
+
+                ${assignments.map(assignment => `
+                    <div class="student-row">
+
+                        <span>
+
+                            <b>
+                                ${assignment.title ?? 'Untitled Assignment'}
+                            </b>
+
+                            <small
+                                class="muted"
+                                style="display:block"
+                            >
+                                Grade ${assignment.grade ?? '-'}
+                                -
+                                ${assignment.section ?? '-'}
+                                •
+                                ${assignment.subject ?? '-'}
+                            </small>
+
+                        </span>
+
+                        <span class="tag">
+                            ${assignment.submitted ?? 0}
+                            submitted
+                        </span>
+
+                    </div>
+                `).join('')}
+            `;
+
+        }
+
+
+        /* =========================
+           LOAD NOTICES
+        ========================= */
+
+        const notices =
+            await fetchJSON('/api/notices');
+
+        document.getElementById('noticeCount').textContent =
+            notices.length;
+
+    } catch (error) {
+
+        console.error(
+            'Admin dashboard loading error:',
+            error
+        );
+
+    }
+
+}
+
+
+/* =========================
+   PUBLISH NOTICE
+========================= */
+
+document
+    .getElementById('publishNotice')
+    .addEventListener('click', async () => {
+
+        const title =
+            document.getElementById('noticeTitle').value.trim();
+
+        const category =
+            document.getElementById('noticeCategory').value.trim();
+
+        const body =
+            document.getElementById('noticeBody').value.trim();
+
+
+        if (!title) {
+
+            alert('Please enter a notice title.');
+
+            return;
+        }
+
+
+        if (!body) {
+
+            alert('Please enter notice details.');
+
+            return;
+        }
+
+
+        try {
+
+            const response = await fetch(
+                '/api/notices',
+                {
+                    method: 'POST',
+
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+
+                    body: JSON.stringify({
+                        title: title,
+                        body: body,
+                        category: category || 'General'
+                    })
+                }
+            );
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    `Notice publishing failed: ${response.status}`
+                );
+
+            }
+
+
+            alert('Notice published successfully!');
+
+
+            document.getElementById('noticeTitle').value = '';
+
+            document.getElementById('noticeBody').value = '';
+
+            document.getElementById('noticeCategory').value =
+                'General';
+
+
+            await adminLoad();
+
+        } catch (error) {
+
+            console.error(
+                'Notice publishing error:',
+                error
+            );
+
+            alert(
+                'Failed to publish notice. Please check the backend server.'
+            );
+
+        }
+
+    });
+
+
+/* =========================
+   INITIAL LOAD
+========================= */
+
+adminLoad();
+
+</script>
+
+</body>
+</html>

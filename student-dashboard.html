@@ -1,14 +1,1505 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Student Dashboard | SMP International School</title><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="portal.css"></head><body data-role="student"><div class="app"><aside class="sidebar"><a class="side-brand" href="index.html"><div class="logo">SMP</div><div><b>SMP International</b><small>Student Portal</small></div></a><nav class="side-nav"><span class="side-label">Main</span><a class="active" data-page="overview">🏠 Dashboard</a><a data-page="profile">👤 My Profile</a><span class="side-label">Academic</span><a data-page="routine">📅 Class Routine</a><a data-page="attendance">✅ Attendance</a><a data-page="results">📊 Results & GPA</a><a data-page="assignments">📝 Assignments</a><a data-page="subjects">📚 My Subjects</a><a data-page="exam">🧾 Exam Schedule</a><span class="side-label">Services</span><a data-page="fees">💳 Fees & Payments</a><a data-page="library">📖 Library</a><a data-page="transport">🚌 Transport</a><a data-page="calendar">🗓️ Academic Calendar</a><a data-page="notices">🔔 Notices <i class="notice-dot"></i></a><a href="index.html">🌐 School Website</a><a href="login.html">↪ Logout</a></nav></aside><main class="main"><div class="topline"><div><small class="muted">STUDENT PORTAL • ACADEMIC YEAR 2026–27</small><h1>Good morning, <span id="studentName">Ayaan</span> 👋</h1></div><div class="profile-mini"><div class="avatar">AS</div><div><b id="miniName">Ayaan Siddique</b><small class="muted" style="display:block">Grade 8 • Section B • Roll 17</small></div></div></div>
-<section id="overview" class="section-page active"><div class="hero-card"><div><span class="badge">Tuesday • 29 September 2026</span><h2>Ready for another great day?</h2><p>6 classes today • Science assignment due tomorrow • Mid-term begins in 13 days.</p></div><div class="datebox"><b>Grade 8-B</b><br><span>Class Teacher: Ms. Nabila</span></div></div><div class="kpi-grid"><div class="kpi"><div class="icon">✅</div><small>Attendance</small><b>94.3%</b><span class="present">132 days present</span></div><div class="kpi"><div class="icon">🏆</div><small>Class Position</small><b>05</b><span>out of 32 students</span></div><div class="kpi"><div class="icon">📊</div><small>Average Score</small><b>87%</b><span>Last assessment</span></div><div class="kpi"><div class="icon">📝</div><small>Pending Tasks</small><b>02</b><span>1 due tomorrow</span></div></div><div class="two-col"><div class="card"><div class="section-title"><h3>Today's Classes</h3><span class="badge">6 periods</span></div><div class="schedule-item"><div><b>Mathematics</b><small class="muted" style="display:block">Room 204 • Mr. Karim</small></div><span class="tag">8:30 AM</span></div><div class="schedule-item"><div><b>English</b><small class="muted" style="display:block">Room 204 • Ms. Nabila</small></div><span class="tag">9:20 AM</span></div><div class="schedule-item"><div><b>Science Lab</b><small class="muted" style="display:block">Lab 2 • Mr. Hasan</small></div><span class="tag">10:10 AM</span></div><div class="schedule-item"><div><b>ICT</b><small class="muted" style="display:block">Computer Lab • Mr. Faisal</small></div><span class="tag">11:20 AM</span></div></div><div class="card"><h3>Quick Access</h3><div class="action-grid" style="grid-template-columns:repeat(2,1fr)"><button class="action-tile" onclick="openPage('routine')"><span>📅</span>Routine</button><button class="action-tile" onclick="openPage('results')"><span>📊</span>Results</button><button class="action-tile" onclick="openPage('assignments')"><span>📝</span>Homework</button><button class="action-tile" onclick="openPage('fees')"><span>💳</span>Fees</button></div><h3 style="margin-top:22px">Progress</h3><small>Term syllabus completed • 68%</small><div class="progress" style="margin-top:8px"><i style="width:68%"></i></div></div></div></section>
-<section id="profile" class="section-page"><div class="section-title"><h2>Student Profile</h2><span class="badge">Active Student</span></div><div class="card"><div class="form-row"><p><b>Full Name</b><br><span class="muted">Ayaan Siddique</span></p><p><b>Student ID</b><br><span class="muted">SMP-2026-0817</span></p><p><b>Class & Section</b><br><span class="muted">Grade 8 • Section B</span></p><p><b>Roll</b><br><span class="muted">17</span></p><p><b>Guardian</b><br><span class="muted">Mahmud Siddique</span></p><p><b>Blood Group</b><br><span class="muted">B+</span></p><p><b>House</b><br><span class="muted">Blue House</span></p><p><b>Admission Date</b><br><span class="muted">10 Jan 2023</span></p></div></div></section>
-<section id="routine" class="section-page"><div class="section-title"><h2>Weekly Class Routine</h2><span class="badge">Grade 8-B</span></div><div class="card table-wrap"><table class="data-table"><tr><th>Day</th><th>8:30–9:15</th><th>9:20–10:05</th><th>10:10–10:55</th><th>11:20–12:05</th><th>12:10–12:55</th><th>1:00–1:45</th></tr><tr><td>Sunday</td><td>English</td><td>Math</td><td>Science</td><td>Bangla</td><td>ICT</td><td>Arts</td></tr><tr><td>Monday</td><td>Math</td><td>English</td><td>BGS</td><td>Science</td><td>Religion</td><td>Sports</td></tr><tr><td>Tuesday</td><td>Math</td><td>English</td><td>Science Lab</td><td>ICT</td><td>Library</td><td>Bangla</td></tr><tr><td>Wednesday</td><td>Bangla</td><td>BGS</td><td>English</td><td>Math</td><td>Science</td><td>Club</td></tr><tr><td>Thursday</td><td>ICT</td><td>Math</td><td>Science</td><td>English</td><td>Bangla</td><td>Assembly</td></tr></table></div></section>
-<section id="attendance" class="section-page"><div class="section-title"><h2>Attendance</h2><span class="badge">September 2026</span></div><div class="kpi-grid"><div class="kpi"><small>Present</small><b>132</b></div><div class="kpi"><small>Absent</small><b>5</b></div><div class="kpi"><small>Late</small><b>3</b></div><div class="kpi"><small>Overall</small><b>94.3%</b></div></div><div class="card"><h3>Monthly Attendance</h3><div class="progress"><i style="width:94.3%"></i></div><div class="student-row"><span>29 Sep 2026 • Tuesday</span><b class="present">Present</b></div><div class="student-row"><span>28 Sep 2026 • Monday</span><b class="present">Present</b></div><div class="student-row"><span>27 Sep 2026 • Sunday</span><b class="present">Present</b></div></div></section>
-<section id="results" class="section-page"><div class="section-title"><h2>Results & GPA</h2><select><option>Mid-Term 2026</option><option>Class Test 2</option><option>Class Test 1</option></select></div><div class="kpi-grid"><div class="kpi"><small>Total</small><b>701/800</b></div><div class="kpi"><small>Average</small><b>87.6%</b></div><div class="kpi"><small>GPA</small><b>4.88</b></div><div class="kpi"><small>Position</small><b>05</b></div></div><div class="card table-wrap"><table class="data-table"><tr><th>Subject</th><th>CQ</th><th>MCQ</th><th>Practical</th><th>Total</th><th>Grade</th></tr><tr><td>Mathematics</td><td>55</td><td>18</td><td>19</td><td>92</td><td>A+</td></tr><tr><td>English</td><td>51</td><td>17</td><td>17</td><td>85</td><td>A</td></tr><tr><td>Science</td><td>52</td><td>18</td><td>19</td><td>89</td><td>A+</td></tr><tr><td>ICT</td><td>56</td><td>19</td><td>20</td><td>95</td><td>A+</td></tr></table></div></section>
-<section id="assignments" class="section-page"><div class="section-title"><h2>Assignments</h2><span class="badge">2 pending</span></div><div class="three-col"><div class="class-card"><span class="badge">Science</span><h3>Solar System Model</h3><p class="muted">Create a labelled 3D model and a one-page explanation.</p><div class="class-meta"><span class="mini-chip">Due 30 Sep</span><span class="mini-chip">20 marks</span></div><button class="btn action" data-toast="Assignment submitted successfully">Submit Work</button></div><div class="class-card"><span class="badge">English</span><h3>Essay Writing</h3><p class="muted">Write 500 words on environmental responsibility.</p><div class="class-meta"><span class="mini-chip">Due 03 Oct</span><span class="mini-chip">15 marks</span></div><button class="btn action" data-toast="Draft saved">Open Assignment</button></div><div class="class-card"><span class="badge">ICT</span><h3>HTML Mini Project</h3><p class="muted">Build a simple personal profile webpage.</p><div class="class-meta"><span class="mini-chip">Due 07 Oct</span><span class="mini-chip">25 marks</span></div><button class="btn action" data-toast="Assignment opened">View Details</button></div></div></section>
-<section id="subjects" class="section-page"><div class="section-title"><h2>My Subjects</h2><span class="badge">9 subjects</span></div><div class="three-col"><div class="class-card"><h3>Bangla</h3><p class="muted">Syllabus progress</p><div class="progress"><i style="width:55%"></i></div><div class="class-meta"><span class="mini-chip">55% complete</span><span class="mini-chip">Resources</span></div></div><div class="class-card"><h3>English</h3><p class="muted">Syllabus progress</p><div class="progress"><i style="width:59%"></i></div><div class="class-meta"><span class="mini-chip">59% complete</span><span class="mini-chip">Resources</span></div></div><div class="class-card"><h3>Mathematics</h3><p class="muted">Syllabus progress</p><div class="progress"><i style="width:63%"></i></div><div class="class-meta"><span class="mini-chip">63% complete</span><span class="mini-chip">Resources</span></div></div><div class="class-card"><h3>Science</h3><p class="muted">Syllabus progress</p><div class="progress"><i style="width:67%"></i></div><div class="class-meta"><span class="mini-chip">67% complete</span><span class="mini-chip">Resources</span></div></div><div class="class-card"><h3>BGS</h3><p class="muted">Syllabus progress</p><div class="progress"><i style="width:71%"></i></div><div class="class-meta"><span class="mini-chip">71% complete</span><span class="mini-chip">Resources</span></div></div><div class="class-card"><h3>ICT</h3><p class="muted">Syllabus progress</p><div class="progress"><i style="width:75%"></i></div><div class="class-meta"><span class="mini-chip">75% complete</span><span class="mini-chip">Resources</span></div></div><div class="class-card"><h3>Religion</h3><p class="muted">Syllabus progress</p><div class="progress"><i style="width:79%"></i></div><div class="class-meta"><span class="mini-chip">79% complete</span><span class="mini-chip">Resources</span></div></div><div class="class-card"><h3>Physical Education</h3><p class="muted">Syllabus progress</p><div class="progress"><i style="width:83%"></i></div><div class="class-meta"><span class="mini-chip">83% complete</span><span class="mini-chip">Resources</span></div></div><div class="class-card"><h3>Arts & Crafts</h3><p class="muted">Syllabus progress</p><div class="progress"><i style="width:87%"></i></div><div class="class-meta"><span class="mini-chip">87% complete</span><span class="mini-chip">Resources</span></div></div></div></section>
-<section id="exam" class="section-page"><div class="section-title"><h2>Mid-Term Exam Schedule</h2><span class="badge">Starts 12 Oct</span></div><div class="card table-wrap"><table class="data-table"><tr><th>Date</th><th>Subject</th><th>Time</th><th>Room</th><th>Duration</th></tr><tr><td>12 Oct</td><td>English</td><td>10:00 AM</td><td>204</td><td>2h 30m</td></tr><tr><td>14 Oct</td><td>Mathematics</td><td>10:00 AM</td><td>204</td><td>2h 30m</td></tr><tr><td>16 Oct</td><td>Science</td><td>10:00 AM</td><td>Lab Hall</td><td>2h 30m</td></tr><tr><td>19 Oct</td><td>Bangla</td><td>10:00 AM</td><td>204</td><td>2h 30m</td></tr></table></div></section>
-<section id="fees" class="section-page"><div class="section-title"><h2>Fees & Payments</h2><button class="btn action" data-toast="Demo payment receipt generated">Download Receipt</button></div><div class="kpi-grid"><div class="kpi"><small>Total Paid</small><b>৳49,500</b></div><div class="kpi"><small>Next Due</small><b>৳5,500</b></div><div class="kpi"><small>Due Date</small><b>10 Oct</b></div><div class="kpi"><small>Status</small><b class="fee-paid">Clear</b></div></div><div class="card table-wrap"><table class="data-table"><tr><th>Invoice</th><th>Month</th><th>Amount</th><th>Date</th><th>Status</th></tr><tr><td>#SMP09026</td><td>September</td><td>৳5,500</td><td>05 Sep</td><td class="fee-paid">Paid</td></tr><tr><td>#SMP10026</td><td>October</td><td>৳5,500</td><td>10 Oct</td><td class="fee-due">Upcoming</td></tr></table></div></section>
-<section id="library" class="section-page"><div class="section-title"><h2>Library</h2><span class="badge">3 books issued</span></div><div class="two-col"><div class="card"><h3>Issued Books</h3><div class="book"><div class="book-cover">📘</div><div><b>English Grammar in Use</b><small class="muted" style="display:block">Due 05 Oct • Acc. #ENG-1024</small></div></div><div class="book"><div class="book-cover">📗</div><div><b>General Science 8</b><small class="muted" style="display:block">Due 08 Oct • Acc. #SCI-0818</small></div></div></div><div class="card"><h3>Library Account</h3><p><b>Card:</b> LIB-0817</p><p><b>Borrow limit:</b> 4 books</p><p><b>Fine:</b> ৳0</p><button class="btn action" data-toast="Library catalogue opened">Browse Catalogue</button></div></div></section>
-<section id="transport" class="section-page"><div class="section-title"><h2>School Transport</h2><span class="badge">Route 05</span></div><div class="two-col"><div class="card"><h3>Assigned Bus</h3><p><b>Bus:</b> SMP-05 • Dhaka Metro-B 15-2045</p><p><b>Pickup:</b> 7:25 AM • Green Road Stop</p><p><b>Drop:</b> Approx. 3:20 PM</p><p><b>Driver:</b> Md. Salim • Contact via school office</p></div><div class="card"><h3>Route Stops</h3><div class="timeline"><div class="timeline-item"><b>Dhanmondi 27</b><small class="muted" style="display:block">7:10 AM</small></div><div class="timeline-item"><b>Green Road</b><small class="muted" style="display:block">7:25 AM • Your stop</small></div><div class="timeline-item"><b>School Campus</b><small class="muted" style="display:block">7:50 AM</small></div></div></div></div></section>
-<section id="calendar" class="section-page"><div class="section-title"><h2>Academic Calendar</h2><span class="badge">October 2026</span></div><div class="two-col"><div class="card"><div class="calendar"><span class="head">S</span><span class="head">M</span><span class="head">T</span><span class="head">W</span><span class="head">T</span><span class="head">F</span><span class="head">S</span><span class="">1</span><span class="">2</span><span class="">3</span><span class="">4</span><span class="">5</span><span class="">6</span><span class="">7</span><span class="">8</span><span class="">9</span><span class="">10</span><span class="">11</span><span class="today">12</span><span class="">13</span><span class="">14</span><span class="">15</span><span class="">16</span><span class="">17</span><span class="">18</span><span class="">19</span><span class="">20</span><span class="">21</span><span class="">22</span><span class="">23</span><span class="">24</span><span class="">25</span><span class="">26</span><span class="">27</span><span class="">28</span><span class="">29</span><span class="">30</span><span class="">31</span></div></div><div class="card"><h3>Upcoming Events</h3><div class="event-card"><b>12 Oct • Mid-Term Begins</b><small class="muted" style="display:block">Academic</small></div><div class="event-card"><b>24 Oct • Parent–Teacher Meeting</b><small class="muted" style="display:block">Campus</small></div><div class="event-card"><b>29 Oct • Science Fair</b><small class="muted" style="display:block">Activity</small></div></div></div></section>
-<section id="notices" class="section-page"><div class="section-title"><h2>Notice Board</h2><span class="badge">4 new</span></div><div class="card"><div class="notice-item"><div><b>Mid-Term Examination Routine</b><small class="muted" style="display:block">Published 28 Sep • Academic Office</small></div><span class="tag">Academic</span></div><div class="notice-item"><div><b>Parent–Teacher Meeting</b><small class="muted" style="display:block">Published 24 Sep • Administration</small></div><span class="tag">General</span></div><div class="notice-item"><div><b>Annual Science Fair Registration</b><small class="muted" style="display:block">Published 21 Sep • Science Club</small></div><span class="tag">Activity</span></div></div></section></main></div><script src="portal.js"></script><script>const saved=localStorage.getItem('smpName');if(saved){studentName.textContent=saved.split(' ')[0];miniName.textContent=saved}</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Student Dashboard | SMP International School</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="portal.css">
+</head>
+
+<body data-role="student">
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <a class="side-brand" href="index.html">
+                <div class="logo">SMP</div>
+
+                <div>
+                    <b>SMP International</b>
+                    <small>Student Portal</small>
+                </div>
+            </a>
+
+            <nav class="side-nav">
+
+                <span class="side-label">Main</span>
+
+                <a class="active" data-page="overview">
+                    🏠 Dashboard
+                </a>
+
+                <a data-page="profile">
+                    👤 My Profile
+                </a>
+
+                <span class="side-label">Academic</span>
+
+                <a data-page="routine">
+                    📅 Class Routine
+                </a>
+
+                <a data-page="attendance">
+                    ✅ Attendance
+                </a>
+
+                <a data-page="results">
+                    📊 Results & GPA
+                </a>
+
+                <a data-page="assignments">
+                    📝 Assignments
+                </a>
+
+                <a data-page="subjects">
+                    📚 My Subjects
+                </a>
+
+                <a data-page="exam">
+                    🧾 Exam Schedule
+                </a>
+
+                <span class="side-label">Services</span>
+
+                <a data-page="fees">
+                    💳 Fees & Payments
+                </a>
+
+                <a data-page="library">
+                    📖 Library
+                </a>
+
+                <a data-page="transport">
+                    🚌 Transport
+                </a>
+
+                <a data-page="calendar">
+                    🗓️ Academic Calendar
+                </a>
+
+                <a data-page="notices">
+                    🔔 Notices <i class="notice-dot"></i>
+                </a>
+
+                <a href="index.html">
+                    🌐 School Website
+                </a>
+
+                <a href="login.html">
+                    ↪ Logout
+                </a>
+
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+
+            <!-- Top Header -->
+            <div class="topline">
+
+                <div>
+                    <small class="muted">
+                        STUDENT PORTAL • ACADEMIC YEAR 2026–27
+                    </small>
+
+                    <h1>
+                        Good morning,
+                        <span id="studentName">Ayaan</span> 👋
+                    </h1>
+                </div>
+
+                <div class="profile-mini">
+
+                    <div class="avatar">AS</div>
+
+                    <div>
+                        <b id="miniName">Ayaan Siddique</b>
+
+                        <small
+                            class="muted"
+                            style="display: block;"
+                        >
+                            Grade 8 • Section B • Roll 17
+                        </small>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Overview -->
+            <section
+                id="overview"
+                class="section-page active"
+            >
+
+                <div class="hero-card">
+
+                    <div>
+                        <span class="badge">
+                            Tuesday • 29 September 2026
+                        </span>
+
+                        <h2>
+                            Ready for another great day?
+                        </h2>
+
+                        <p>
+                            6 classes today • Science assignment due tomorrow •
+                            Mid-term begins in 13 days.
+                        </p>
+                    </div>
+
+                    <div class="datebox">
+                        <b>Grade 8-B</b>
+                        <br>
+                        <span>
+                            Class Teacher: Ms. Nabila
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="kpi-grid">
+
+                    <div class="kpi">
+                        <div class="icon">✅</div>
+                        <small>Attendance</small>
+                        <b>94.3%</b>
+                        <span class="present">
+                            132 days present
+                        </span>
+                    </div>
+
+                    <div class="kpi">
+                        <div class="icon">🏆</div>
+                        <small>Class Position</small>
+                        <b>05</b>
+                        <span>
+                            out of 32 students
+                        </span>
+                    </div>
+
+                    <div class="kpi">
+                        <div class="icon">📊</div>
+                        <small>Average Score</small>
+                        <b>87%</b>
+                        <span>
+                            Last assessment
+                        </span>
+                    </div>
+
+                    <div class="kpi">
+                        <div class="icon">📝</div>
+                        <small>Pending Tasks</small>
+                        <b>02</b>
+                        <span>
+                            1 due tomorrow
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="two-col">
+
+                    <!-- Today's Classes -->
+                    <div class="card">
+
+                        <div class="section-title">
+                            <h3>Today's Classes</h3>
+                            <span class="badge">
+                                6 periods
+                            </span>
+                        </div>
+
+                        <div class="schedule-item">
+                            <div>
+                                <b>Mathematics</b>
+                                <small
+                                    class="muted"
+                                    style="display: block;"
+                                >
+                                    Room 204 • Mr. Karim
+                                </small>
+                            </div>
+
+                            <span class="tag">
+                                8:30 AM
+                            </span>
+                        </div>
+
+                        <div class="schedule-item">
+                            <div>
+                                <b>English</b>
+                                <small
+                                    class="muted"
+                                    style="display: block;"
+                                >
+                                    Room 204 • Ms. Nabila
+                                </small>
+                            </div>
+
+                            <span class="tag">
+                                9:20 AM
+                            </span>
+                        </div>
+
+                        <div class="schedule-item">
+                            <div>
+                                <b>Science Lab</b>
+                                <small
+                                    class="muted"
+                                    style="display: block;"
+                                >
+                                    Lab 2 • Mr. Hasan
+                                </small>
+                            </div>
+
+                            <span class="tag">
+                                10:10 AM
+                            </span>
+                        </div>
+
+                        <div class="schedule-item">
+                            <div>
+                                <b>ICT</b>
+                                <small
+                                    class="muted"
+                                    style="display: block;"
+                                >
+                                    Computer Lab • Mr. Faisal
+                                </small>
+                            </div>
+
+                            <span class="tag">
+                                11:20 AM
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <!-- Quick Access -->
+                    <div class="card">
+
+                        <h3>Quick Access</h3>
+
+                        <div
+                            class="action-grid"
+                            style="grid-template-columns: repeat(2, 1fr);"
+                        >
+
+                            <button
+                                class="action-tile"
+                                onclick="openPage('routine')"
+                            >
+                                <span>📅</span>
+                                Routine
+                            </button>
+
+                            <button
+                                class="action-tile"
+                                onclick="openPage('results')"
+                            >
+                                <span>📊</span>
+                                Results
+                            </button>
+
+                            <button
+                                class="action-tile"
+                                onclick="openPage('assignments')"
+                            >
+                                <span>📝</span>
+                                Homework
+                            </button>
+
+                            <button
+                                class="action-tile"
+                                onclick="openPage('fees')"
+                            >
+                                <span>💳</span>
+                                Fees
+                            </button>
+
+                        </div>
+
+                        <h3 style="margin-top: 22px;">
+                            Progress
+                        </h3>
+
+                        <small>
+                            Term syllabus completed • 68%
+                        </small>
+
+                        <div
+                            class="progress"
+                            style="margin-top: 8px;"
+                        >
+                            <i style="width: 68%;"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Profile -->
+            <section
+                id="profile"
+                class="section-page"
+            >
+
+                <div class="section-title">
+                    <h2>Student Profile</h2>
+                    <span class="badge">
+                        Active Student
+                    </span>
+                </div>
+
+                <div class="card">
+
+                    <div class="form-row">
+
+                        <p>
+                            <b>Full Name</b>
+                            <br>
+                            <span class="muted">
+                                Ayaan Siddique
+                            </span>
+                        </p>
+
+                        <p>
+                            <b>Student ID</b>
+                            <br>
+                            <span class="muted">
+                                SMP-2026-0817
+                            </span>
+                        </p>
+
+                        <p>
+                            <b>Class & Section</b>
+                            <br>
+                            <span class="muted">
+                                Grade 8 • Section B
+                            </span>
+                        </p>
+
+                        <p>
+                            <b>Roll</b>
+                            <br>
+                            <span class="muted">
+                                17
+                            </span>
+                        </p>
+
+                        <p>
+                            <b>Guardian</b>
+                            <br>
+                            <span class="muted">
+                                Mahmud Siddique
+                            </span>
+                        </p>
+
+                        <p>
+                            <b>Blood Group</b>
+                            <br>
+                            <span class="muted">
+                                B+
+                            </span>
+                        </p>
+
+                        <p>
+                            <b>House</b>
+                            <br>
+                            <span class="muted">
+                                Blue House
+                            </span>
+                        </p>
+
+                        <p>
+                            <b>Admission Date</b>
+                            <br>
+                            <span class="muted">
+                                10 Jan 2023
+                            </span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Routine -->
+            <section
+                id="routine"
+                class="section-page"
+            >
+
+                <div class="section-title">
+                    <h2>Weekly Class Routine</h2>
+                    <span class="badge">
+                        Grade 8-B
+                    </span>
+                </div>
+
+                <div class="card table-wrap">
+
+                    <table class="data-table">
+
+                        <tr>
+                            <th>Day</th>
+                            <th>8:30–9:15</th>
+                            <th>9:20–10:05</th>
+                            <th>10:10–10:55</th>
+                            <th>11:20–12:05</th>
+                            <th>12:10–12:55</th>
+                            <th>1:00–1:45</th>
+                        </tr>
+
+                        <tr>
+                            <td>Sunday</td>
+                            <td>English</td>
+                            <td>Math</td>
+                            <td>Science</td>
+                            <td>Bangla</td>
+                            <td>ICT</td>
+                            <td>Arts</td>
+                        </tr>
+
+                        <tr>
+                            <td>Monday</td>
+                            <td>Math</td>
+                            <td>English</td>
+                            <td>BGS</td>
+                            <td>Science</td>
+                            <td>Religion</td>
+                            <td>Sports</td>
+                        </tr>
+
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>Math</td>
+                            <td>English</td>
+                            <td>Science Lab</td>
+                            <td>ICT</td>
+                            <td>Library</td>
+                            <td>Bangla</td>
+                        </tr>
+
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>Bangla</td>
+                            <td>BGS</td>
+                            <td>English</td>
+                            <td>Math</td>
+                            <td>Science</td>
+                            <td>Club</td>
+                        </tr>
+
+                        <tr>
+                            <td>Thursday</td>
+                            <td>ICT</td>
+                            <td>Math</td>
+                            <td>Science</td>
+                            <td>English</td>
+                            <td>Bangla</td>
+                            <td>Assembly</td>
+                        </tr>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <!-- Attendance -->
+            <section
+                id="attendance"
+                class="section-page"
+            >
+
+                <div class="section-title">
+                    <h2>Attendance</h2>
+                    <span class="badge">
+                        September 2026
+                    </span>
+                </div>
+
+                <div class="kpi-grid">
+
+                    <div class="kpi">
+                        <small>Present</small>
+                        <b>132</b>
+                    </div>
+
+                    <div class="kpi">
+                        <small>Absent</small>
+                        <b>5</b>
+                    </div>
+
+                    <div class="kpi">
+                        <small>Late</small>
+                        <b>3</b>
+                    </div>
+
+                    <div class="kpi">
+                        <small>Overall</small>
+                        <b>94.3%</b>
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Monthly Attendance</h3>
+
+                    <div class="progress">
+                        <i style="width: 94.3%;"></i>
+                    </div>
+
+                    <div class="student-row">
+                        <span>
+                            29 Sep 2026 • Tuesday
+                        </span>
+
+                        <b class="present">
+                            Present
+                        </b>
+                    </div>
+
+                    <div class="student-row">
+                        <span>
+                            28 Sep 2026 • Monday
+                        </span>
+
+                        <b class="present">
+                            Present
+                        </b>
+                    </div>
+
+                    <div class="student-row">
+                        <span>
+                            27 Sep 2026 • Sunday
+                        </span>
+
+                        <b class="present">
+                            Present
+                        </b>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Results -->
+            <section
+                id="results"
+                class="section-page"
+            >
+
+                <div class="section-title">
+
+                    <h2>Results & GPA</h2>
+
+                    <select>
+                        <option>Mid-Term 2026</option>
+                        <option>Class Test 2</option>
+                        <option>Class Test 1</option>
+                    </select>
+
+                </div>
+
+                <div class="kpi-grid">
+
+                    <div class="kpi">
+                        <small>Total</small>
+                        <b>701/800</b>
+                    </div>
+
+                    <div class="kpi">
+                        <small>Average</small>
+                        <b>87.6%</b>
+                    </div>
+
+                    <div class="kpi">
+                        <small>GPA</small>
+                        <b>4.88</b>
+                    </div>
+
+                    <div class="kpi">
+                        <small>Position</small>
+                        <b>05</b>
+                    </div>
+
+                </div>
+
+                <div class="card table-wrap">
+
+                    <table class="data-table">
+
+                        <tr>
+                            <th>Subject</th>
+                            <th>CQ</th>
+                            <th>MCQ</th>
+                            <th>Practical</th>
+                            <th>Total</th>
+                            <th>Grade</th>
+                        </tr>
+
+                        <tr>
+                            <td>Mathematics</td>
+                            <td>55</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>92</td>
+                            <td>A+</td>
+                        </tr>
+
+                        <tr>
+                            <td>English</td>
+                            <td>51</td>
+                            <td>17</td>
+                            <td>17</td>
+                            <td>85</td>
+                            <td>A</td>
+                        </tr>
+
+                        <tr>
+                            <td>Science</td>
+                            <td>52</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>89</td>
+                            <td>A+</td>
+                        </tr>
+
+                        <tr>
+                            <td>ICT</td>
+                            <td>56</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>95</td>
+                            <td>A+</td>
+                        </tr>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <!-- Assignments -->
+            <section
+                id="assignments"
+                class="section-page"
+            >
+
+                <div class="section-title">
+                    <h2>Assignments</h2>
+                    <span class="badge">
+                        2 pending
+                    </span>
+                </div>
+
+                <div class="three-col">
+
+                    <div class="class-card">
+
+                        <span class="badge">Science</span>
+
+                        <h3>Solar System Model</h3>
+
+                        <p class="muted">
+                            Create a labelled 3D model and a one-page explanation.
+                        </p>
+
+                        <div class="class-meta">
+                            <span class="mini-chip">
+                                Due 30 Sep
+                            </span>
+
+                            <span class="mini-chip">
+                                20 marks
+                            </span>
+                        </div>
+
+                        <button
+                            class="btn action"
+                            data-toast="Assignment submitted successfully"
+                        >
+                            Submit Work
+                        </button>
+
+                    </div>
+
+                    <div class="class-card">
+
+                        <span class="badge">English</span>
+
+                        <h3>Essay Writing</h3>
+
+                        <p class="muted">
+                            Write 500 words on environmental responsibility.
+                        </p>
+
+                        <div class="class-meta">
+                            <span class="mini-chip">
+                                Due 03 Oct
+                            </span>
+
+                            <span class="mini-chip">
+                                15 marks
+                            </span>
+                        </div>
+
+                        <button
+                            class="btn action"
+                            data-toast="Draft saved"
+                        >
+                            Open Assignment
+                        </button>
+
+                    </div>
+
+                    <div class="class-card">
+
+                        <span class="badge">ICT</span>
+
+                        <h3>HTML Mini Project</h3>
+
+                        <p class="muted">
+                            Build a simple personal profile webpage.
+                        </p>
+
+                        <div class="class-meta">
+                            <span class="mini-chip">
+                                Due 07 Oct
+                            </span>
+
+                            <span class="mini-chip">
+                                25 marks
+                            </span>
+                        </div>
+
+                        <button
+                            class="btn action"
+                            data-toast="Assignment opened"
+                        >
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Subjects -->
+            <section
+                id="subjects"
+                class="section-page"
+            >
+
+                <div class="section-title">
+                    <h2>My Subjects</h2>
+                    <span class="badge">
+                        9 subjects
+                    </span>
+                </div>
+
+                <div class="three-col">
+
+                    <div class="class-card">
+                        <h3>Bangla</h3>
+                        <p class="muted">Syllabus progress</p>
+
+                        <div class="progress">
+                            <i style="width: 55%;"></i>
+                        </div>
+
+                        <div class="class-meta">
+                            <span class="mini-chip">
+                                55% complete
+                            </span>
+                            <span class="mini-chip">
+                                Resources
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="class-card">
+                        <h3>English</h3>
+                        <p class="muted">Syllabus progress</p>
+
+                        <div class="progress">
+                            <i style="width: 59%;"></i>
+                        </div>
+
+                        <div class="class-meta">
+                            <span class="mini-chip">
+                                59% complete
+                            </span>
+                            <span class="mini-chip">
+                                Resources
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="class-card">
+                        <h3>Mathematics</h3>
+                        <p class="muted">Syllabus progress</p>
+
+                        <div class="progress">
+                            <i style="width: 63%;"></i>
+                        </div>
+
+                        <div class="class-meta">
+                            <span class="mini-chip">
+                                63% complete
+                            </span>
+                            <span class="mini-chip">
+                                Resources
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="class-card">
+                        <h3>Science</h3>
+                        <p class="muted">Syllabus progress</p>
+
+                        <div class="progress">
+                            <i style="width: 67%;"></i>
+                        </div>
+
+                        <div class="class-meta">
+                            <span class="mini-chip">
+                                67% complete
+                            </span>
+                            <span class="mini-chip">
+                                Resources
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="class-card">
+                        <h3>BGS</h3>
+                        <p class="muted">Syllabus progress</p>
+
+                        <div class="progress">
+                            <i style="width: 71%;"></i>
+                        </div>
+
+                        <div class="class-meta">
+                            <span class="mini-chip">
+                                71% complete
+                            </span>
+                            <span class="mini-chip">
+                                Resources
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="class-card">
+                        <h3>ICT</h3>
+                        <p class="muted">Syllabus progress</p>
+
+                        <div class="progress">
+                            <i style="width: 75%;"></i>
+                        </div>
+
+                        <div class="class-meta">
+                            <span class="mini-chip">
+                                75% complete
+                            </span>
+                            <span class="mini-chip">
+                                Resources
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="class-card">
+                        <h3>Religion</h3>
+                        <p class="muted">Syllabus progress</p>
+
+                        <div class="progress">
+                            <i style="width: 79%;"></i>
+                        </div>
+
+                        <div class="class-meta">
+                            <span class="mini-chip">
+                                79% complete
+                            </span>
+                            <span class="mini-chip">
+                                Resources
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="class-card">
+                        <h3>Physical Education</h3>
+                        <p class="muted">Syllabus progress</p>
+
+                        <div class="progress">
+                            <i style="width: 83%;"></i>
+                        </div>
+
+                        <div class="class-meta">
+                            <span class="mini-chip">
+                                83% complete
+                            </span>
+                            <span class="mini-chip">
+                                Resources
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="class-card">
+                        <h3>Arts & Crafts</h3>
+                        <p class="muted">Syllabus progress</p>
+
+                        <div class="progress">
+                            <i style="width: 87%;"></i>
+                        </div>
+
+                        <div class="class-meta">
+                            <span class="mini-chip">
+                                87% complete
+                            </span>
+                            <span class="mini-chip">
+                                Resources
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Exam Schedule -->
+            <section
+                id="exam"
+                class="section-page"
+            >
+
+                <div class="section-title">
+                    <h2>Mid-Term Exam Schedule</h2>
+                    <span class="badge">
+                        Starts 12 Oct
+                    </span>
+                </div>
+
+                <div class="card table-wrap">
+
+                    <table class="data-table">
+
+                        <tr>
+                            <th>Date</th>
+                            <th>Subject</th>
+                            <th>Time</th>
+                            <th>Room</th>
+                            <th>Duration</th>
+                        </tr>
+
+                        <tr>
+                            <td>12 Oct</td>
+                            <td>English</td>
+                            <td>10:00 AM</td>
+                            <td>204</td>
+                            <td>2h 30m</td>
+                        </tr>
+
+                        <tr>
+                            <td>14 Oct</td>
+                            <td>Mathematics</td>
+                            <td>10:00 AM</td>
+                            <td>204</td>
+                            <td>2h 30m</td>
+                        </tr>
+
+                        <tr>
+                            <td>16 Oct</td>
+                            <td>Science</td>
+                            <td>10:00 AM</td>
+                            <td>Lab Hall</td>
+                            <td>2h 30m</td>
+                        </tr>
+
+                        <tr>
+                            <td>19 Oct</td>
+                            <td>Bangla</td>
+                            <td>10:00 AM</td>
+                            <td>204</td>
+                            <td>2h 30m</td>
+                        </tr>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <!-- Fees -->
+            <section
+                id="fees"
+                class="section-page"
+            >
+
+                <div class="section-title">
+
+                    <h2>Fees & Payments</h2>
+
+                    <button
+                        class="btn action"
+                        data-toast="Demo payment receipt generated"
+                    >
+                        Download Receipt
+                    </button>
+
+                </div>
+
+                <div class="kpi-grid">
+
+                    <div class="kpi">
+                        <small>Total Paid</small>
+                        <b>৳49,500</b>
+                    </div>
+
+                    <div class="kpi">
+                        <small>Next Due</small>
+                        <b>৳5,500</b>
+                    </div>
+
+                    <div class="kpi">
+                        <small>Due Date</small>
+                        <b>10 Oct</b>
+                    </div>
+
+                    <div class="kpi">
+                        <small>Status</small>
+                        <b class="fee-paid">Clear</b>
+                    </div>
+
+                </div>
+
+                <div class="card table-wrap">
+
+                    <table class="data-table">
+
+                        <tr>
+                            <th>Invoice</th>
+                            <th>Month</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+
+                        <tr>
+                            <td>#SMP09026</td>
+                            <td>September</td>
+                            <td>৳5,500</td>
+                            <td>05 Sep</td>
+                            <td class="fee-paid">Paid</td>
+                        </tr>
+
+                        <tr>
+                            <td>#SMP10026</td>
+                            <td>October</td>
+                            <td>৳5,500</td>
+                            <td>10 Oct</td>
+                            <td class="fee-due">Upcoming</td>
+                        </tr>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <!-- Library -->
+            <section
+                id="library"
+                class="section-page"
+            >
+
+                <div class="section-title">
+                    <h2>Library</h2>
+                    <span class="badge">
+                        3 books issued
+                    </span>
+                </div>
+
+                <div class="two-col">
+
+                    <div class="card">
+
+                        <h3>Issued Books</h3>
+
+                        <div class="book">
+
+                            <div class="book-cover">📘</div>
+
+                            <div>
+                                <b>English Grammar in Use</b>
+
+                                <small
+                                    class="muted"
+                                    style="display: block;"
+                                >
+                                    Due 05 Oct • Acc. #ENG-1024
+                                </small>
+                            </div>
+
+                        </div>
+
+                        <div class="book">
+
+                            <div class="book-cover">📗</div>
+
+                            <div>
+                                <b>General Science 8</b>
+
+                                <small
+                                    class="muted"
+                                    style="display: block;"
+                                >
+                                    Due 08 Oct • Acc. #SCI-0818
+                                </small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card">
+
+                        <h3>Library Account</h3>
+
+                        <p>
+                            <b>Card:</b> LIB-0817
+                        </p>
+
+                        <p>
+                            <b>Borrow limit:</b> 4 books
+                        </p>
+
+                        <p>
+                            <b>Fine:</b> ৳0
+                        </p>
+
+                        <button
+                            class="btn action"
+                            data-toast="Library catalogue opened"
+                        >
+                            Browse Catalogue
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Transport -->
+            <section
+                id="transport"
+                class="section-page"
+            >
+
+                <div class="section-title">
+                    <h2>School Transport</h2>
+                    <span class="badge">
+                        Route 05
+                    </span>
+                </div>
+
+                <div class="two-col">
+
+                    <div class="card">
+
+                        <h3>Assigned Bus</h3>
+
+                        <p>
+                            <b>Bus:</b>
+                            SMP-05 • Dhaka Metro-B 15-2045
+                        </p>
+
+                        <p>
+                            <b>Pickup:</b>
+                            7:25 AM • Green Road Stop
+                        </p>
+
+                        <p>
+                            <b>Drop:</b>
+                            Approx. 3:20 PM
+                        </p>
+
+                        <p>
+                            <b>Driver:</b>
+                            Md. Salim • Contact via school office
+                        </p>
+
+                    </div>
+
+                    <div class="card">
+
+                        <h3>Route Stops</h3>
+
+                        <div class="timeline">
+
+                            <div class="timeline-item">
+                                <b>Dhanmondi 27</b>
+
+                                <small
+                                    class="muted"
+                                    style="display: block;"
+                                >
+                                    7:10 AM
+                                </small>
+                            </div>
+
+                            <div class="timeline-item">
+                                <b>Green Road</b>
+
+                                <small
+                                    class="muted"
+                                    style="display: block;"
+                                >
+                                    7:25 AM • Your stop
+                                </small>
+                            </div>
+
+                            <div class="timeline-item">
+                                <b>School Campus</b>
+
+                                <small
+                                    class="muted"
+                                    style="display: block;"
+                                >
+                                    7:50 AM
+                                </small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Calendar -->
+            <section
+                id="calendar"
+                class="section-page"
+            >
+
+                <div class="section-title">
+                    <h2>Academic Calendar</h2>
+                    <span class="badge">
+                        October 2026
+                    </span>
+                </div>
+
+                <div class="two-col">
+
+                    <div class="card">
+
+                        <div class="calendar">
+
+                            <span class="head">S</span>
+                            <span class="head">M</span>
+                            <span class="head">T</span>
+                            <span class="head">W</span>
+                            <span class="head">T</span>
+                            <span class="head">F</span>
+                            <span class="head">S</span>
+
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>10</span>
+                            <span>11</span>
+                            <span class="today">12</span>
+                            <span>13</span>
+                            <span>14</span>
+                            <span>15</span>
+                            <span>16</span>
+                            <span>17</span>
+                            <span>18</span>
+                            <span>19</span>
+                            <span>20</span>
+                            <span>21</span>
+                            <span>22</span>
+                            <span>23</span>
+                            <span>24</span>
+                            <span>25</span>
+                            <span>26</span>
+                            <span>27</span>
+                            <span>28</span>
+                            <span>29</span>
+                            <span>30</span>
+                            <span>31</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card">
+
+                        <h3>Upcoming Events</h3>
+
+                        <div class="event-card">
+                            <b>12 Oct • Mid-Term Begins</b>
+
+                            <small
+                                class="muted"
+                                style="display: block;"
+                            >
+                                Academic
+                            </small>
+                        </div>
+
+                        <div class="event-card">
+                            <b>24 Oct • Parent–Teacher Meeting</b>
+
+                            <small
+                                class="muted"
+                                style="display: block;"
+                            >
+                                Campus
+                            </small>
+                        </div>
+
+                        <div class="event-card">
+                            <b>29 Oct • Science Fair</b>
+
+                            <small
+                                class="muted"
+                                style="display: block;"
+                            >
+                                Activity
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Notices -->
+            <section
+                id="notices"
+                class="section-page"
+            >
+
+                <div class="section-title">
+                    <h2>Notice Board</h2>
+                    <span class="badge">
+                        4 new
+                    </span>
+                </div>
+
+                <div class="card">
+
+                    <div class="notice-item">
+
+                        <div>
+                            <b>
+                                Mid-Term Examination Routine
+                            </b>
+
+                            <small
+                                class="muted"
+                                style="display: block;"
+                            >
+                                Published 28 Sep • Academic Office
+                            </small>
+                        </div>
+
+                        <span class="tag">
+                            Academic
+                        </span>
+
+                    </div>
+
+                    <div class="notice-item">
+
+                        <div>
+                            <b>
+                                Parent–Teacher Meeting
+                            </b>
+
+                            <small
+                                class="muted"
+                                style="display: block;"
+                            >
+                                Published 24 Sep • Administration
+                            </small>
+                        </div>
+
+                        <span class="tag">
+                            General
+                        </span>
+
+                    </div>
+
+                    <div class="notice-item">
+
+                        <div>
+                            <b>
+                                Annual Science Fair Registration
+                            </b>
+
+                            <small
+                                class="muted"
+                                style="display: block;"
+                            >
+                                Published 21 Sep • Science Club
+                            </small>
+                        </div>
+
+                        <span class="tag">
+                            Activity
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="portal.js"></script>
+
+    <script>
+        const saved = localStorage.getItem("smpName");
+
+        if (saved) {
+            studentName.textContent = saved.split(" ")[0];
+            miniName.textContent = saved;
+        }
+    </script>
+
+</body>
+</html>

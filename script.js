@@ -1,6 +1,116 @@
-const menu=document.querySelector('.menu'),nav=document.querySelector('nav');menu.onclick=()=>nav.classList.toggle('open');document.querySelectorAll('nav a').forEach(a=>a.onclick=()=>nav.classList.remove('open'));
-document.getElementById('admissionForm').addEventListener('submit',e=>{e.preventDefault();document.getElementById('formMsg').textContent='Thank you! Your admission enquiry has been received.';e.target.reset()});document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();document.getElementById('contactMsg').textContent='Message sent successfully. We will get back to you soon.';e.target.reset()});
-const base=[['Sunday','English','Math','Science','Bangla','ICT','Arts'],['Monday','Math','English','BGS','Science','Religion','Sports'],['Tuesday','Science','Bangla','Math','English','ICT','Library'],['Wednesday','Bangla','BGS','English','Math','Science','Club'],['Thursday','ICT','Math','Science','English','Bangla','Assembly']];
-function renderRoutine(){const g=document.getElementById('classSelect').value;document.getElementById('routineBody').innerHTML=base.map((r,i)=>`<tr>${r.map((x,j)=>`<td>${j?x+(j===1?` <small>(${g})</small>`:''):x}</td>`).join('')}</tr>`).join('')}renderRoutine();document.getElementById('classSelect').onchange=renderRoutine;
-document.getElementById('allNotices').onclick=()=>{const list=document.getElementById('noticeList');if(!document.getElementById('extraNotice'))list.insertAdjacentHTML('beforeend','<article id="extraNotice"><time>12 SEP</time><div><b>Annual Sports Registration</b><p>Students can register with their class teacher.</p></div><span>Sports</span></article><article><time>05 SEP</time><div><b>Library Membership Update</b><p>New digital library cards are available from the office.</p></div><span>Library</span></article>')};
-const notices=['Mid-Term Examination Routine has been published. Check the notice board for details.','Admission enquiries for Academic Year 2027 are now open.','Inter-House Science Fair registration closes next week.'];let ni=0;setInterval(()=>{ni=(ni+1)%notices.length;document.getElementById('ticker').textContent=notices[ni]},4500);
+const menu = document.querySelector(".menu");
+const nav = document.querySelector("nav");
+
+menu.onclick = () => {
+    nav.classList.toggle("open");
+};
+
+document.querySelectorAll("nav a").forEach((a) => {
+    a.onclick = () => {
+        nav.classList.remove("open");
+    };
+});
+
+/* Admission Form */
+document
+    .getElementById("admissionForm")
+    .addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        document.getElementById("formMsg").textContent =
+            "Thank you! Your admission enquiry has been received.";
+
+        e.target.reset();
+    });
+
+/* Contact Form */
+document
+    .getElementById("contactForm")
+    .addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        document.getElementById("contactMsg").textContent =
+            "Message sent successfully. We will get back to you soon.";
+
+        e.target.reset();
+    });
+
+/* Class Routine */
+const base = [
+    ["Sunday", "English", "Math", "Science", "Bangla", "ICT", "Arts"],
+    ["Monday", "Math", "English", "BGS", "Science", "Religion", "Sports"],
+    ["Tuesday", "Science", "Bangla", "Math", "English", "ICT", "Library"],
+    ["Wednesday", "Bangla", "BGS", "English", "Math", "Science", "Club"],
+    ["Thursday", "ICT", "Math", "Science", "English", "Bangla", "Assembly"],
+];
+
+function renderRoutine() {
+    const g = document.getElementById("classSelect").value;
+
+    document.getElementById("routineBody").innerHTML = base
+        .map(
+            (r) =>
+                `<tr>${r
+                    .map(
+                        (x, j) =>
+                            `<td>${
+                                j
+                                    ? x +
+                                      (j === 1
+                                          ? ` <small>(${g})</small>`
+                                          : "")
+                                    : x
+                            }</td>`
+                    )
+                    .join("")}</tr>`
+        )
+        .join("");
+}
+
+renderRoutine();
+
+document.getElementById("classSelect").onchange = renderRoutine;
+
+/* Notices */
+document.getElementById("allNotices").onclick = () => {
+    const list = document.getElementById("noticeList");
+
+    if (!document.getElementById("extraNotice")) {
+        list.insertAdjacentHTML(
+            "beforeend",
+            `
+            <article id="extraNotice">
+                <time>12 SEP</time>
+                <div>
+                    <b>Annual Sports Registration</b>
+                    <p>Students can register with their class teacher.</p>
+                </div>
+                <span>Sports</span>
+            </article>
+
+            <article>
+                <time>05 SEP</time>
+                <div>
+                    <b>Library Membership Update</b>
+                    <p>New digital library cards are available from the office.</p>
+                </div>
+                <span>Library</span>
+            </article>
+            `
+        );
+    }
+};
+
+/* Notice Ticker */
+const notices = [
+    "Mid-Term Examination Routine has been published. Check the notice board for details.",
+    "Admission enquiries for Academic Year 2027 are now open.",
+    "Inter-House Science Fair registration closes next week.",
+];
+
+let ni = 0;
+
+setInterval(() => {
+    ni = (ni + 1) % notices.length;
+    document.getElementById("ticker").textContent = notices[ni];
+}, 4500);
