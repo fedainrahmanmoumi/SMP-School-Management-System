@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Local SQLite database (generated automatically)
+school.db
+school.db-shm
+school.db-wal
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local environment files
+.env
+.env.*
+!.env.example
