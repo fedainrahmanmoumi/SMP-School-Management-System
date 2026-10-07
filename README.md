@@ -8,12 +8,12 @@ A full-stack school management web application developed as a semester project. 
 
 ## Student Information
 
-- **Student Name:** Your Name
-- **Student ID:** Your ID
+- **Student Name:** Fedain Rahman Moumi
+- **Student ID:** 2023200000343
 - **Department:** CSE
-- **Course:** Software Development
-- **Semester:** 3rd Year, Last Semester
-- **Institution:** Your University
+- **Course:** Software Development & Project Mangment Lab
+- **Semester:** 9th
+- **Institution:** Southeast University
 
 ## Main Features
 
